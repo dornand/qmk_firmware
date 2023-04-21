@@ -44,7 +44,7 @@
         "split_count": [35, 35]
     },
     "processor": "atmega32u4",
-    "bootloader": "caterina",
+    "bootloader": "qmk-dfu",
     "layouts": {
         "LAYOUT": {
             "layout": [
