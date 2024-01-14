@@ -1,2 +1,2 @@
-# Lily58L
-copied from lily58l
+# dornand's Lily58 layout
+Copied from 'default'.

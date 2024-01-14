@@ -7,6 +7,7 @@ enum layer_number {
   _ADJUST,
 };
 
+# using one shot shift
 #define OS_LSFT OSM(MOD_LSFT)
 #define OS_RSFT OSM(MOD_RSFT)
 
