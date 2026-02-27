@@ -60,7 +60,7 @@ jobs:
           echo "targets=$(jq -c 'keys' targets.json)" >> $GITHUB_OUTPUT
 
       - name: Upload targets json
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: targets-${{ inputs.keymap }}
           path: targets.json
@@ -108,7 +108,7 @@ jobs:
           qmk mass-compile -t -j $NCPUS -e DUMP_CI_METADATA=yes $(jq -r '.["${{ matrix.target }}"].targets' targets.json) || touch .failed
 
       - name: Upload binaries
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: firmware-${{ inputs.keymap }}-${{ matrix.target }}
           if-no-files-found: ignore
@@ -142,7 +142,7 @@ jobs:
           merge-multiple: true
 
       - name: Upload all firmwares
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: firmware-${{ inputs.keymap }}
           if-no-files-found: ignore
